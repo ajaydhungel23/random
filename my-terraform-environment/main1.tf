@@ -7,13 +7,18 @@ If the resource is no longer accessible within AWS Proton, it may have been dele
 */
 
 resource "aws_glue_workflow" "GlueWOrkflow" {
-  name = "GlueWOrkflow"
+    name = "GlueWOrkflow"
+   
 }
 
 resource "aws_glue_trigger" "parquettransformation" {
   name          = "parquettransformation"
   type          = "SCHEDULED"
-  workflow_name = aws_glue_workflow.GLueWorkflow.name
+  workflow_name = aws_glue_workflow.GlueWOrkflow.name
+  schedule = "cron(45 11 ? * MON-FRI *)"
+  start_on_creation = true
+  
+
 
   actions {
     job_name = "CFNRGlueETL1"

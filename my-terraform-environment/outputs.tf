@@ -6,42 +6,18 @@ To manage this resource, see AWS Proton Resource: arn:aws:proton:us-east-1:03134
 If the resource is no longer accessible within AWS Proton, it may have been deleted and may require manual cleanup.
 */
 
-output "SnsTopicArn" {
-  value = aws_sns_topic.ping_topic.arn
+output "GlueWorkflowArn" {
+  value = aws_glue_workflow.GlueWOrkflow.arn
 }
 
-output "SnsTopicName" {
-  value = aws_sns_topic.ping_topic.name
+output "GlueTriggerArn" {
+  value = aws_glue_trigger.parquettransformation.arn
 }
 
-output "SnsRegion" {
-  value = local.region
+output "GlueJobArn" {
+  value = aws_glue_job.CFNRGlueETL1.arn
 }
 
-output "VpcId" {
-  value = module.vpc.vpc_id
-}
 
-output "PublicSubnetOneId" {
-  value = module.vpc.public_subnets[0]
-}
 
-output "PublicSubnetTwoId" {
-  value = module.vpc.public_subnets[1]
-}
 
-output "PrivateSubnetOneId" {
-  value = module.vpc.private_subnets[0]
-}
-
-output "PrivateSubnetTwoId" {
-  value = module.vpc.private_subnets[1]
-}
-
-output "VpcDefaultSecurityGroupId" {
-  value = module.vpc.default_security_group_id
-}
-
-output "VpcConnectorArn" {
-  value = aws_apprunner_vpc_connector.connector.id
-}
