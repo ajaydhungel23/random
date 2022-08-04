@@ -1,10 +1,10 @@
 {
-  "deploymentId" : "e47dcc2c-f5f6-4eb3-88e7-35a454cb6d5b",
+  "deploymentId" : "324afa7f-db4e-4b9d-b037-19bcb1ecceda",
   "isResourceDeleted" : false,
   "resourceMetadata" : {
     "arn" : "arn:aws:proton:us-east-1:031342435657:environment/my-terraform-environment",
     "templateArn" : "arn:aws:proton:us-east-1:031342435657:environment-template/my-terraform-template",
-    "templateMajorVersion" : "1",
+    "templateMajorVersion" : "2",
     "templateMinorVersion" : "0"
   }
 }
